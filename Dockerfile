@@ -11,8 +11,9 @@ RUN npm install
 # Copy the rest of the backend application code
 COPY backend/ .
 
-# Expose the port the app runs on
-EXPOSE 3001
+# Cloud Run sets the PORT environment variable to 8080 by default.
+# The app will listen on this port via process.env.PORT.
+EXPOSE 8080
 
 # Start the application
 CMD [ "npm", "start" ]

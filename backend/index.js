@@ -205,6 +205,6 @@ app.post('/api/simulate-rain', async (req, res) => {
     }
 });
 
-app.listen(port, () => {
-    console.log(`Backend server running on http://localhost:${port}`);
+app.listen(port, '0.0.0.0', () => {
+    console.log(`Voyazo Backend is live and listening on port ${port}`);
 });
