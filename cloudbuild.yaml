@@ -1,14 +1,14 @@
 steps:
   # Step 1: Build the container image
   - name: 'gcr.io/cloud-builders/docker'
-    args: ['build', '-t', 'gcr.io/$PROJECT_ID/voyazo-backend', '.']
+    args: ['build', '-t', 'gcr.io/forward-emitter-495708-n1/voyazo-backend:latest', '.']
 
   # Step 2: Push the image to Container Registry
   - name: 'gcr.io/cloud-builders/docker'
-    args: ['push', 'gcr.io/$PROJECT_ID/voyazo-backend']
+    args: ['push', 'gcr.io/forward-emitter-495708-n1/voyazo-backend:latest']
 
 images:
-  - 'gcr.io/$PROJECT_ID/voyazo-backend'
+  - 'gcr.io/forward-emitter-495708-n1/voyazo-backend:latest'
 
 options:
   logging: CLOUD_LOGGING_ONLY
